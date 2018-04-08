@@ -18,11 +18,14 @@ void setup() {
   pinMode(BLUE_DISPLAY, OUTPUT);
   pinMode(RED_DISPLAY, OUTPUT);
 
-  pinMode(HALL_SENSOR, INPUT);
-  //Serial.begin(9600);
-  //bluetooth.begin(9600);
+  pinMode(HALL_SENSOR, INPUT); // Set the hall sensor pin as input
+  
+  Serial.begin(9600);
+  bluetooth.begin(9600);
+  
+  //This will switch-on the RED column and switch-off the blue one. 
   digitalWrite(BLUE_DISPLAY, HIGH);
-  //digitalWrite(RED_DISPLAY, HIGH);
+  digitalWrite(RED_DISPLAY, LOW);
 }
 
 void loop() {
